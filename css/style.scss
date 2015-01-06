@@ -1,0 +1,535 @@
+@font-face {
+	font-family: futura;
+	src: url('../fonts/Futura_light.ttf');
+}
+
+/* CSS Document */
+
+/* COLORS*/
+
+
+$orange: #ff6600;
+$dk-orange: #ea7f45;
+$blue: #0d5298;
+$lt-blue: #4db4e6;
+$dk-blue: #08528b;
+$ddk-blue: #002b4c;
+
+$primary-font: 'Source Sans Pro', sans-serif;
+$secondary-font: 'Open Sans Condensed', sans-serif;
+$third-font: Roboto;
+$fourth-font: futura;
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+body,html{min-height:100%;width:100%;margin:0px;padding:0px;}
+
+h1,h2,h3,h4,h5,h6,a,p,ul,li,table,tr,th,img,div {margin:0px;padding:0px;border:0px;text-decoration:none;}
+
+.hr-orange {width:100%;margin-top:10px;margin-bottom:20px;height:2px;background-color:$dk-blue;}
+
+.shadow {
+  box-shadow: 0px 1px 3px 1px #444; }
+
+.white {color:#fff;}
+.boldColor {color:$blue;font-weight:bold;}
+
+p {	font-family: $primary-font;}
+  
+body {
+	background-color:#fff;
+	background-image: url("../images/speckle.jpg");
+	font-family: $primary-font;
+}
+
+.compactNav {display:none;}
+
+#headerLine {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	z-index:2100;
+	border-top:6px solid $blue;
+}
+
+nav {
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	z-index:2000;
+	height:100px;
+	background-color:#fff;
+	background-image:url(../images/logo.png);
+	background-position: 150px 10px;
+	background-repeat:no-repeat;
+	background-size:250px;
+	box-shadow: 0px 1px 3px 1px #444; 
+}
+
+nav ul {
+	list-style:none;
+	margin-top:20px;
+	margin-left:500px;
+}
+
+nav ul li {
+	float:left;
+	padding:15px 30px 15px 30px;
+	margin-right:10px;
+	border-radius:5px;
+	font-size:20px;
+	font-family: $primary-font;
+}
+
+nav ul li:hover {
+	background-color:$blue;
+	color:#fff;
+	cursor:pointer;
+	border-bottom:3px solid $dk-blue;
+}
+
+
+
+.selected {
+	background-color:$blue;
+	color:#fff;
+	cursor:pointer;
+	box-shadow: 0px 1px 3px 1px #444; 
+	border-bottom:3px solid $dk-blue;
+}
+
+#leftArrow {
+	position:absolute;
+	top:49%;
+	z-index:700;
+	left:-6%;
+	width: 0; 
+	height: 0; 
+	border-top: 30px solid transparent;
+	border-bottom: 30px solid transparent; 	
+	border-right:30px solid #333;
+	cursor:pointer;
+}
+
+#rightArrow {
+	position:absolute;
+	top:49%;
+	z-index:700;
+	left:106%;
+	width: 0; 
+	height: 0; 
+	border-top: 30px solid transparent;
+	border-bottom: 30px solid transparent; 	
+	border-left:30px solid #333;
+	cursor:pointer;
+}
+
+header {
+	margin-top:20px;
+	position:relative;
+	z-index:900;
+	height:580px;
+	margin-left:15%;
+	width:70%;
+	background-image:url(../images/retinalcamera.jpg);
+	background-position:top center;
+	background-size:cover;
+	background-repeat:no-repeat;
+	box-shadow: 0px 1px 3px 1px #444; 
+}
+
+#headContent {
+	width:65%;
+	float: right;
+	margin-top:350px;
+	margin-right:10px;
+	border-radius:5px;
+	background-color:#fff;
+	padding:20px;	
+	text-align:right;
+	box-shadow: 0px 2px 3px 0px #444;
+	font-family: $primary-font;
+}
+
+#headContent h1 {
+	font-family: $primary-font;
+	font-size:23px;
+}
+
+#headContent button {
+	height:40px;
+	width:100px;
+	margin-left:20px;
+	background-color: $orange;
+	border:0px;
+	color:#fff;
+}
+.cta {
+	font-size:20px;
+}
+
+header aside {
+	margin-top:20px;
+}
+
+header aside input {
+	cursor:pointer;
+	width:20px;
+	height:20px;
+}
+
+#footerLine {
+	position:fixed;
+	bottom:0px;
+	left:0px;
+	z-index:1100;
+	
+	border-top:15px solid $blue;
+	width:100%;
+	
+}
+
+footer {
+	position:relative;
+	z-index:1200;
+	
+	width:100%;
+	height:240px;
+	
+	background-color:$blue;
+	
+	background: -webkit-linear-gradient($dk-blue, $blue); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient($dk-blue, $blue); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient($dk-blue, $blue); /* For Firefox 3.6 to 15 */
+	background: linear-gradient($dk-blue, $blue); /* Standard syntax */
+	
+	text-align:center;
+	padding-top:20px;
+	border-top:6px solid $ddk-blue;
+	color:#fff;
+  	box-shadow: 0px 2px 8px 4px #111;
+}
+
+#wrapper, #wrapper-noHeader {
+	position:relative;
+	z-index:1000;
+	border-top:10px solid $blue;
+	width:65%;
+	margin-left:15%;
+	border-radius:5px;
+	background-color:#fff;
+	padding-top:50px;
+	padding-bottom:50px;
+	padding-right:5%;
+	margin-top:20px;
+	margin-bottom:80px;
+}
+
+#wrapper-noHeader {
+	top:0px;
+	margin-top:20px;
+	margin-bottom:60px;
+	padding:3%;
+	width:70%;
+	margin-left:15%;
+	padding-top:10px;
+	min-height:400px;
+	margin-bottom:80px;
+
+	ul li {
+		font-size: 18px;
+	}
+}
+
+#wrapper-noHeader details summary {
+	font-size:20px;
+	padding:10px;
+	cursor:pointer;
+	border:1px solid #fff;
+}
+
+#wrapper-noHeader details img {
+	width:130px;
+	height:180px;
+	padding-right:20px;	
+	padding-bottom:10px;
+}
+
+#wrapper-noHeader details p {
+	margin-top:10px;
+	font-size:18px;
+
+
+}
+
+#wrapper-noHeader details summary:hover {
+	background-color:#eee;
+	border:1px solid #ccc;
+}
+
+#wrapper-noHeader ul {
+	margin-left:25px;
+	list-style:none;
+}
+
+#wrapper-noHeader ul li {
+	margin:10px;
+	
+}
+
+.leftCol {
+	float:left;
+	width:56%;
+	padding:4%;
+	padding-top:3%;
+}
+
+.rightCol button {
+	clear:both;
+	float:right;
+	margin-top:40px;
+	border:0px;
+	padding:15px;
+	padding-left:30px;
+	padding-right:30px;
+	color:#fff;
+	background-color:$blue;
+	border-radius:3px;
+	font-size:16px;
+}
+.rightCol {	
+	float:left;
+	width:32%;
+	padding:2%;
+	padding-top:1%;
+}
+
+.valueSquare {
+	float:left;
+	width:94%;
+	padding:2%;
+	padding-top:4%;
+	padding-bottom:4%;
+	margin:2%;
+	padding-top:1%;
+	border-radius:5px;
+	
+}
+
+.valueSquare h3 {
+	margin-top:5px;
+	margin-bottom:8px;
+	font-size:25px;
+}
+
+.valueSquare div {
+	width:100%;
+	height:130px;
+	background-position:top center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	overflow:hidden;
+	border-left:6px solid $dk-blue;
+	box-shadow: 0px 1px 3px 1px #444;
+	cursor:pointer;
+}
+
+.bg001 {background-image:url(../images/stock-photo-caring-nurse-or-doctor-holding-elderly-lady-s-hand-with-care-140404582.jpg);}
+.bg002 {background-image:url(../images/stock-photo-low-focus-portrait-of-young-woman-scientist-analyzing-two-test-tubes-face-on-background-140769964.jpg);}
+.bg003 {background-image:url(../images/stock-photo-hand-in-blue-glove-touching-modern-digital-tablet-concept-image-on-medical-or-research-theme-102017668.jpg);}
+.bg004 {background-image:url(../images/stock-photo-team-of-paper-doll-people-holding-hands-144653342.jpg);}
+
+.valueSquare div div {
+	border:0px;
+	height:130px;
+	width:130px;
+	
+	box-shadow: 0px 1px 3px 1px #444;
+	
+	background: -webkit-linear-gradient($blue, $dk-blue); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient($blue, $dk-blue); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient($blue, $dk-blue); /* For Firefox 3.6 to 15 */
+	background: linear-gradient($blue, $dk-blue); /* Standard syntax */
+		
+	position:relative;
+	left:-90px;
+	
+	-ms-transform: rotate(45deg); /* IE 9 */
+	-webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+	transform: rotate(45deg);	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1390px) {
+	nav ul li {
+		font-size:17px;
+		padding:15px;
+		margin-right:5px;
+		border-radius:5px;
+	}
+	header {margin:0px;width:85%;margin-left:7%;margin-top:120px;margin-bottom:20px;}
+	#headContent{width:600px;padding:10px;padding-right:30px;margin-top:350px;margin-right:25px;}
+	#headContent h1 {font-size:25px;}
+	#headContent p {font-size:13px;padding-left:10%;}
+	#wrapper {margin:0px;padding:0px;float:left;position:relative;top:0px;margin:0px;width:85%;margin-left:7%;margin-bottom:60px;}
+	#wrapper-noHeader {margin-top:150px;width:70%;margin-left:15%;margin-bottom:60px;}
+	footer {float:left;margin:0px;padding:0px;}
+	#leftArrow {left:-5%;}
+	#rightArrow {left:103%;}
+}
+
+@media (max-width: 1150px) {
+	nav {
+		background-position: 50px 17px;
+		background-repeat:no-repeat;
+		background-size:200px;
+	}
+	nav ul {
+		margin-top:20px;
+		margin-left:350px;
+	}
+	
+	header {margin:0px;padding:0px;width:100%;height:600px;margin-bottom:20px;}
+
+	#rightArrow,#leftArrow{z-index:1000;top:30%;}
+	
+	#leftArrow {border-right:30px solid $orange;left:2%;}
+	#rightArrow {border-left:30px solid $orange;left:96%;}
+	#headContent {
+		width:68%;
+		float: left;
+		margin:0px;
+		padding-left:3%;
+		padding-right:3%;
+		margin-top:410px;
+		border-radius:0px;
+		margin-bottom:40px;
+		}		
+	#headContent h1{
+		text-align: left;
+		margin:0px;
+		padding:0px;
+		}		
+	#headContent p{
+		text-align: left;
+		margin:0px;
+		padding:0px;
+		}
+	header aside input {
+		width:10px;
+		height:10px;
+	}
+
+
+	#wrapper{margin:0px;padding:0px;width:100%;padding-top:40px;padding-bottom:40px;}
+	#wrapper-noHeader {margin-top:150px;width:80%;margin-left:10%;margin-bottom:60px;}
+	.rightCol, .leftCol {
+		width:44%;
+	}
+}
+
+@media (max-width: 960px) {	
+	.fullNav{
+		display:none;
+	}	
+	.compactNav{
+		display:block;
+		float: right;
+		margin-right:10px;
+		margin-top:23px;
+		cursor:pointer;
+	}
+
+	.compactMenu {
+		display:none;
+		position:absolute;
+		z-index: 9999;
+		right:0px;
+		top:100px;
+		width:50%;		
+		list-style: none;
+		clear: both;
+		float: right;
+		padding-left:5%;
+		padding-right:5%;
+		padding-top:15px;
+		cursor: pointer;
+
+		border:1px solid #000;
+
+		background: -webkit-linear-gradient($blue, #fff); /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient($blue, #fff); /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient($blue, #fff); /* For Firefox 3.6 to 15 */
+		background: linear-gradient($blue, #fff); /* Standard syntax */
+	}
+	.compactMenu li {
+		padding-left:5%;
+		padding-top:10px;
+		padding-bottom:10px;
+		border-radius:10px;
+		border:solid 1px #000;
+		float: none;
+		width:85%;
+		height:45px;
+		font-size:22px;
+		margin-bottom:15px;
+		background-color:#fff;
+		color: $orange;
+	}
+	#wrapper-noHeader {margin-top:150px;width:80%;margin-left:6%;margin-bottom:60px;}
+
+	#headContent {width:92%;}
+}
+
+@media (max-width: 770px) {	
+	#headContent {width:92%;}
+}
+
+
+@media (max-width: 670px) {	
+	
+	header {
+		display:none;
+	}
+	
+	#wrapper, #wrapper-noHeader {
+		float: left;
+		position:relative;
+		top:100px;
+		margin:0px;
+		width:96%;
+		border:0px;
+		padding-top:30px;
+		padding-left:2%;
+		padding-right:2%;
+	}
+
+	.rightCol, .leftCol {
+		float:left;
+		width:94%;
+		padding:0px;
+		margin:0px;
+		padding-left:3%;
+		padding-right:3%;
+	}
+
+	footer {
+		float: left;
+		margin-top:100px;
+	}
+}
